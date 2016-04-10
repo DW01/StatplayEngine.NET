@@ -59,6 +59,10 @@ namespace CellFunctions
 
             // Cell is occupied by nobody, so we use NULL here.
             CellOccupier = null;
+
+            // Cell does not need HP, so null this as well.
+            CellCurrentHP = null;
+            CellMaxHP = null;
         }
 
     }
