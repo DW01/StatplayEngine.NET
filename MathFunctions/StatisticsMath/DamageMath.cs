@@ -39,7 +39,9 @@ namespace MathFunctions.StatisticsMath
             // If / else to handle clamping / rounding.
             if (ResultantDamage < 1)
             {
-                // TODO: logic to clamp values below 1 to 1.
+                //Set ResultantDamage to 1 and be done with it.
+                ResultantDamage = 1;
+                return ResultantDamage;
             }
             else
             {
