@@ -43,5 +43,11 @@ namespace MathFunctions.StatisticsMath
             }
 
         }
+
+        // PercentMaxHPDamage constructor. This is where the work gets done!
+        public PercentMaxHPDamage (double PercentageAsDecimal, double TargetUnitMaxHP)
+        {
+            CalculateDamage();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace MathFunctions.StatisticsMath.DamageTypes
         private double TargetDefense;
         private double ResultantDamage;
 
-        // Basic implementation of damage calculations, no clamping yet.
+        // Basic implementation of damage calculations.
         public double CalculateDamage()
         {
             // Basic calculations.
@@ -44,6 +44,12 @@ namespace MathFunctions.StatisticsMath.DamageTypes
                 return ResultantDamage;
             }
 
+        }
+
+        // BasicDamage constructor. This is where the work gets done!
+        public BasicDamage (double SourceOffense, double TargetDefense)
+        {
+            CalculateDamage ();
         }
 
     }

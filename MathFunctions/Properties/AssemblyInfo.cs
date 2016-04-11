@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MathFunctions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Mathematical function class library for statistical calculations.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MathFunctions")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyProduct("ZEJ Statplay Engine .NET")]
+[assembly: AssemblyCopyright("Copyright © 2016 Eebit, Nebulon Ranger")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
