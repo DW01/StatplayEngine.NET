@@ -14,16 +14,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MathFunctions.StatisticsMath
+namespace MathFunctions.StatisticsMath.DamageTypes
 {
-    // Damage interface for all classes to implement.
-    public interface IDamage
-    {
-        double CalculateDamage();
-    }
-
-    // Default Damage class for all types of Damage to inherit from.
-    public class Damage : IDamage
+    // Basic Damage class, used for direct attacks.
+    public class BasicDamage : IDamage
     {
         // Variables, to be clamped later.
         private double SourceOffense;
@@ -51,5 +45,7 @@ namespace MathFunctions.StatisticsMath
             }
 
         }
+
     }
+
 }

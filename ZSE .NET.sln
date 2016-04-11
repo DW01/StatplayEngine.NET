@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFunctions", "MathFuncti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharSheetFunctions", "CharSheetFunctions\CharSheetFunctions.csproj", "{1A732FAA-09A4-4D87-BDAC-4843062EE0C5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{78D4AE02-D283-43B3-AB5F-12E217281AC1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShadowSystemFunctions", "ShadowSystemFunctions", "{78D4AE02-D283-43B3-AB5F-12E217281AC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
