@@ -19,23 +19,25 @@ namespace MathFunctions.StatisticsMath
     // Damage interface for all classes to implement.
     public interface IDamage
     {
-        float CalculateDamage();
+        double CalculateDamage();
     }
 
     // Default Damage class for all types of Damage to inherit from.
     public class Damage : IDamage
     {
         // Variables, to be clamped later.
-        private float SourceOffense;
-        private float TargetDefense;
-        private float ResultantDamage;
-        // private float ClampedDamage; perform clamping later when I figure out how to do it.
+        private double SourceOffense;
+        private double TargetDefense;
+        private double ResultantDamage;
 
         // Basic implementation of damage calculations, no clamping yet.
-        public float CalculateDamage()
+        public double CalculateDamage()
         {
+            // TODO: if / else to clamp values below 1 to 1.
             ResultantDamage = SourceOffense - TargetDefense;
+            Math.Round(ResultantDamage, 0);
             return ResultantDamage;
+
         }
     }
 }
