@@ -76,7 +76,7 @@ namespace CellFunctions
 
     // Special "Starting Cells". Position can be changed (not yet implemented, obviously).
     // Will probably become its own class file later.
-    public class StartingCell : Cell ()
+    public class StartingCell : Cell
         {
         //Instantiate cell type.
         Cell allyStartingCell = new Cell ("AS", "Starting Cell", "Starting Cells for allied units (players, AI units, etc..).", "[color=blue]{ }[/color]")
