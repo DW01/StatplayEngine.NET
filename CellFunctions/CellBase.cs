@@ -38,6 +38,7 @@ namespace CellFunctions
         private bool IsCellPassable;
 
         // Special HP / toughness variables, mainly to support breakable objects.
+        private bool IsBreakable;
         private int CellCurrentHP;
         private int CellMaxHP;
 
@@ -61,6 +62,7 @@ namespace CellFunctions
             CellOccupier = null;
 
             // Cell does not need HP, so null this as well.
+            IsBreakable = false;
             CellCurrentHP = null;
             CellMaxHP = null;
         }
