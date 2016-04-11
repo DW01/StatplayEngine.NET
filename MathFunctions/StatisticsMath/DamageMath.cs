@@ -33,10 +33,20 @@ namespace MathFunctions.StatisticsMath
         // Basic implementation of damage calculations, no clamping yet.
         public double CalculateDamage()
         {
-            // TODO: if / else to clamp values below 1 to 1.
+            // Basic calculations.
             ResultantDamage = SourceOffense - TargetDefense;
-            Math.Round(ResultantDamage, 0);
-            return ResultantDamage;
+
+            // If / else to handle clamping / rounding.
+            if (ResultantDamage < 1)
+            {
+                // TODO: logic to clamp values below 1 to 1.
+            }
+            else
+            {
+                // Round resultant damage to integer-space, then return it.
+                Math.Round(ResultantDamage, 0);
+                return ResultantDamage;
+            }
 
         }
     }
