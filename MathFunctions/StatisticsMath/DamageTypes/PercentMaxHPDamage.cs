@@ -28,7 +28,7 @@ namespace MathFunctions.StatisticsMath
         public double CalculateDamage ()
         {
             // Do the percentage calculations, then return.
-            ResultantDamage = PercentageAsDecimal / TargetUnitMaxHP * 100;
+            ResultantDamage = TargetUnitMaxHP * PercentageAsDecimal;
 
             // Yet another if / else to prevent Damage from going under 1.
             if (ResultantDamage < 1)
