@@ -14,15 +14,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CellFunctions.CellTypes
+namespace CellFunctions.CellTypes.WallCells
 {
-    // Empty cell class, as referenced in CellBase.cs
-    class EmptyCell
+    class SolidWallCell
     {
-        // Instantiate a basic empty Cell.
-        static void Main()
+        // Construct Cell here. This is a solid, non-breakable Wall Cell.
+        Cell solidWallCell = new Cell ("X", "Wall Cell", "This is a [non-breakable] Wall Cell.", "{X}")
         {
-            Cell emptyCell = new Cell();
+            // TODO: Cell variables.
         }
     }
 }

@@ -65,6 +65,11 @@ namespace CellFunctions
             CellMaxHP = null;
         }
 
+        // Empty cell constructor for use by other Cell types.
+        // Takes Identifier, Name, Descriptor and Formatter as constructor arguments.
+        public Cell (string CellIdentifier, string CellName, string CellDescriptor, string CellFormatter)
+        { }
+
     }
 
 }
