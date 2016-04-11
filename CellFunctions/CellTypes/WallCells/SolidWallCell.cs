@@ -19,9 +19,9 @@ namespace CellFunctions.CellTypes.WallCells
     class SolidWallCell : Cell
     {
         // Construct Cell here. This is a solid, non-breakable Wall Cell.
-        Cell solidWallCell = new Cell ("X", "Wall Cell", "This is a [non-breakable] Wall Cell.", "{X}")
+        Cell solidWallCell = new Cell("X", "Wall Cell", "This is a [non-breakable] Wall Cell.", "{X}")
         {
             // TODO: Cell variables.
-        }
+        };
     }
 }

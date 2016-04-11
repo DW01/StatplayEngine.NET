@@ -63,14 +63,31 @@ namespace CellFunctions
 
             // Cell does not need HP, so null this as well.
             IsBreakable = false;
-            CellCurrentHP = null;
-            CellMaxHP = null;
+            CellCurrentHP = 0;
+            CellMaxHP = 0;
         }
 
         // Empty cell constructor for use by other Cell types.
         // Takes Identifier, Name, Descriptor and Formatter as constructor arguments.
         public Cell (string CellIdentifier, string CellName, string CellDescriptor, string CellFormatter)
         { }
+
+    }
+
+    // Special "Starting Cells". Position can be changed (not yet implemented, obviously).
+    // Will probably become its own class file later.
+    public class StartingCell : Cell ()
+        {
+        //Instantiate cell type.
+        Cell allyStartingCell = new Cell ("AS", "Starting Cell", "Starting Cells for allied units (players, AI units, etc..).", "[color=blue]{ }[/color]")
+        {
+             //TODO: Cell spawn logic and variables.
+        };
+
+        Cell enemyStartingCell = new Cell("ES", "Starting Cell", "Starting Cells for enemy units (players, AI units, etc..).", "[color=red]{ }[/color]")
+        {
+            //TODO: Cell spawn logic and variables.
+        };
 
     }
 
