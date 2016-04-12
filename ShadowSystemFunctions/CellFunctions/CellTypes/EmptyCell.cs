@@ -37,8 +37,8 @@ namespace ShadowSystem.CellFunctions.CellTypes
         public double CellMaxHP;
         public bool CellBlockProperty;
 
-        // Implementation of interface contract methods.
-        public virtual void InitialiseFlags()
+        // Helper methods.
+        protected virtual void SetFlags()
         {
             IsCellPassable = true;
             IsCellOccupiable = true;
@@ -46,30 +46,53 @@ namespace ShadowSystem.CellFunctions.CellTypes
             CellBlockProperty = false;
         }
 
-        public virtual void SetBreakability()
+        protected virtual void SetBreakable()
         {
             IsCellBreakable = false;
-            CellHasHP = false;
         }
 
-        public virtual void CreateCell()
+        protected virtual void SetCellHP()
+        {
+            CellHasHP = false;
+            CellCurrentHP = 0;
+            CellMaxHP = 0;
+        }
+
+        protected virtual void SetCellInfo()
         {
             CellName = "Empty Cell";
             CellID = CellName[0];
-            CellDescriptor = "An empty Cell.";
+            CellDescriptor = "A blank Empty Cell.";
             CellFormatter = "{ }";
         }
+        // Implementation of interface contract methods.
+        public void InitialiseFlags()
+        {
+            SetFlags();
+        }
 
+        public void InitialiseBreakability()
+        {
+            SetBreakable();
+            SetCellHP();
+        }
+
+        public void CreateCell()
+        {
+            SetCellInfo();
+        }
         // Constructor.
-        public EmptyCell ()
+        public EmptyCell()
         {
             InitialiseFlags();
-            SetBreakability();
+            InitialiseBreakability();
             CreateCell();
         }
 
         // Run constructor, return.
         EmptyCell emptyCell = new EmptyCell();
-     
+
     }
+     
 }
+
