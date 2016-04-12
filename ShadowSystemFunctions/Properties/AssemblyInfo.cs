@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CellFunctions")]
-[assembly: AssemblyDescription("Cell function class library. Everything except rendering is handled here.")]
+[assembly: AssemblyTitle("Shadow's Statistical System class library")]
+[assembly: AssemblyDescription("Classes, interfaces and functions for Shadow's system.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ZEJ Statplay Engine .NET")]
+[assembly: AssemblyProduct("ZEJ Statistical Roleplaying Engine")]
 [assembly: AssemblyCopyright("Copyright © 2016 Eebit, Nebulon Ranger")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c48ca7f7-047d-4c7c-bf2e-e4afe485e874")]
+[assembly: Guid("742839c2-4b1f-4b4c-b3f8-1dd52dec3aa2")]
 
 // Version information for an assembly consists of the following four values:
 //
