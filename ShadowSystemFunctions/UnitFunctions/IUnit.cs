@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShadowSystem.CharSheetFunctions
+namespace ShadowSystem.UnitFunctions
 {
-    public class CharSheetBase
+    public interface IUnit
     {
     }
 }

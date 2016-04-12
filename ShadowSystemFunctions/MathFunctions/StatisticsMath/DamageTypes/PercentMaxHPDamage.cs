@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MathFunctions.StatisticsMath
+namespace ShadowSystem.MathFunctions.StatisticsMath
 {
     // Percent Max HP Damage class. Used for StatusEffects such as Poison.
     class PercentMaxHPDamage : IDamage

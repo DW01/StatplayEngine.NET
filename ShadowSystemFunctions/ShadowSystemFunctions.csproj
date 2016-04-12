@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CellFunctions\CellBase.cs" />
     <Compile Include="CellFunctions\CellTypes\EmptyCell.cs" />
     <Compile Include="CellFunctions\CellTypes\WallCells\SolidWallCell.cs" />
+    <Compile Include="CellFunctions\CellTypes\WallCells\StartingCell.cs" />
     <Compile Include="CellFunctions\ICell.cs" />
     <Compile Include="CharSheetFunctions\CharSheetBase.cs" />
     <Compile Include="CharSheetFunctions\ICharSheet.cs" />
@@ -57,6 +57,7 @@
     <Compile Include="ShadowSystemBase.cs" />
     <Compile Include="StatFunctions\IStat.cs" />
     <Compile Include="StatFunctions\StatBase.cs" />
+    <Compile Include="UnitFunctions\IUnit.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

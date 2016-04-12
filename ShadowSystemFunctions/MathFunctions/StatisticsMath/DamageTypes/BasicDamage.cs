@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MathFunctions.StatisticsMath.DamageTypes
+namespace ShadowSystem.MathFunctions.StatisticsMath.DamageTypes
 {
     // Basic Damage class, used for direct attacks.
     public class BasicDamage : IDamage

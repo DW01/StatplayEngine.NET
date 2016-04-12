@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MathFunctions.StatisticsMath
+namespace ShadowSystem.MathFunctions.StatisticsMath
 {
     // Damage interface for all classes to implement.
     public interface IDamage

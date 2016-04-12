@@ -14,15 +14,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CellFunctions.CellTypes
+namespace ShadowSystem.CellFunctions.CellTypes
 {
     // Empty cell class, as referenced in CellBase.cs
-    class EmptyCell
+    public class EmptyCell : ICell
     {
-        // Instantiate a basic empty Cell.
-        static void Main()
+        // Descriptor strings.
+        private string CellName;
+        private char CellID;
+        private string CellDescriptor;
+        private string CellFormatter;
+
+        // Passability flags.
+        private bool IsCellPassable;
+        private bool IsCellOccupiable;
+        private bool IsCellOccupied;
+
+        // Breakablility and block property.
+        private bool IsCellBreakable;
+        private bool CellHasHP;
+        private double CellCurrentHP;
+        private double CellMaxHP;
+        private bool CellBlockProperty;
+
+        // Implementation of interface contract methods.
+        public void InitialiseFlags()
         {
-            Cell emptyCell = new Cell();
+            IsCellPassable = true;
+            IsCellOccupiable = true;
+            IsCellOccupied = false;
+            CellBlockProperty = false;
         }
+
+        public void SetBreakability()
+        {
+            IsCellBreakable = false;
+            CellHasHP = false;
+        }
+
+        public void CreateCell()
+        {
+            CellName = "Empty Cell";
+            CellID = CellName[0];
+            CellDescriptor = "An empty Cell.";
+            CellFormatter = "[color=#ff9933]{ }[/color]";
+        }
+
+        // Constructor.
+        public EmptyCell ()
+        {
+            InitialiseFlags();
+            SetBreakability();
+            CreateCell();
+        }
+
+        // Run constructor, return.
+        EmptyCell emptyCell = new EmptyCell();
+     
     }
 }

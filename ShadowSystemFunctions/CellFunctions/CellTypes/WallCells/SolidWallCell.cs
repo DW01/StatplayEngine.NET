@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CellFunctions.CellTypes.WallCells
+namespace ShadowSystem.CellFunctions.CellTypes.WallCells
 {
     class SolidWallCell : Cell
     {

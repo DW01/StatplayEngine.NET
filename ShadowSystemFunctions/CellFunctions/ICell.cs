@@ -8,5 +8,8 @@ namespace ShadowSystem.CellFunctions
 {
     public interface ICell
     {
+        void InitialiseFlags();
+        void SetBreakability();
+        void CreateCell();
     }
 }
