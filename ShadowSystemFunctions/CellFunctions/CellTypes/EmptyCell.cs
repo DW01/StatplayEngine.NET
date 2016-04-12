@@ -20,25 +20,25 @@ namespace ShadowSystem.CellFunctions.CellTypes
     public class EmptyCell : ICell
     {
         // Descriptor strings.
-        private string CellName;
-        private char CellID;
-        private string CellDescriptor;
-        private string CellFormatter;
+        public string CellName;
+        public char CellID;
+        public string CellDescriptor;
+        public string CellFormatter;
 
         // Passability flags.
-        private bool IsCellPassable;
-        private bool IsCellOccupiable;
-        private bool IsCellOccupied;
+        public bool IsCellPassable;
+        public bool IsCellOccupiable;
+        public bool IsCellOccupied;
 
         // Breakablility and block property.
-        private bool IsCellBreakable;
-        private bool CellHasHP;
-        private double CellCurrentHP;
-        private double CellMaxHP;
-        private bool CellBlockProperty;
+        public bool IsCellBreakable;
+        public bool CellHasHP;
+        public double CellCurrentHP;
+        public double CellMaxHP;
+        public bool CellBlockProperty;
 
         // Implementation of interface contract methods.
-        public void InitialiseFlags()
+        public virtual void InitialiseFlags()
         {
             IsCellPassable = true;
             IsCellOccupiable = true;
@@ -46,18 +46,18 @@ namespace ShadowSystem.CellFunctions.CellTypes
             CellBlockProperty = false;
         }
 
-        public void SetBreakability()
+        public virtual void SetBreakability()
         {
             IsCellBreakable = false;
             CellHasHP = false;
         }
 
-        public void CreateCell()
+        public virtual void CreateCell()
         {
             CellName = "Empty Cell";
             CellID = CellName[0];
             CellDescriptor = "An empty Cell.";
-            CellFormatter = "[color=#ff9933]{ }[/color]";
+            CellFormatter = "{ }";
         }
 
         // Constructor.
