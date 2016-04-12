@@ -19,8 +19,10 @@ namespace MathFunctions.StatisticsMath.DamageTypes
     // Basic Damage class, used for direct attacks.
     public class BasicDamage : IDamage
     {
-        // Variables, to be clamped later.
+        // Variables for use in damage calculations, supplied by end-user.
         private double SourceOffense;
+        private double PercentageAsDecimal;
+        private double ResultantOffense;
         private double TargetDefense;
         private double ResultantDamage;
 
@@ -28,7 +30,8 @@ namespace MathFunctions.StatisticsMath.DamageTypes
         public double CalculateDamage()
         {
             // Basic calculations.
-            ResultantDamage = SourceOffense - TargetDefense;
+            ResultantOffense = Math.Round ((SourceOffense * PercentageAsDecimal), 0);
+            ResultantDamage = ResultantOffense - TargetDefense;
 
             // If / else to handle clamping / rounding.
             if (ResultantDamage < 1)
@@ -47,7 +50,7 @@ namespace MathFunctions.StatisticsMath.DamageTypes
         }
 
         // BasicDamage constructor. This is where the work gets done!
-        public BasicDamage (double SourceOffense, double TargetDefense)
+        public BasicDamage (double SourceOffense, double PercentageAsDecimal, double TargetDefense)
         {
             CalculateDamage ();
         }

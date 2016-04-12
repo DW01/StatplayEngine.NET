@@ -39,11 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MathBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatisticsMath\DamageTypes\BasicDamage.cs" />
     <Compile Include="StatisticsMath\DamageTypes\PercentMaxHPDamage.cs" />
     <Compile Include="StatisticsMath\IDamage.cs" />
+    <Compile Include="StatisticsMath\IHealing.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
