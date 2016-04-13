@@ -16,12 +16,35 @@ using System.Threading.Tasks;
 
 namespace ShadowSystem.CellFunctions.CellTypes.WallCells
 {
-    class SolidWallCell : Cell
+    class SolidWallCell : EmptyCell, ICell
     {
-        // Construct Cell here. This is a solid, non-breakable Wall Cell.
-        Cell solidWallCell = new Cell("W", "Wall Cell", "This is a [non-breakable] Wall Cell.", "{w}")
+        // Helper function overrides.
+        protected override void SetFlags()
         {
-            // TODO: Cell variables.
-        };
+            IsCellPassable = false;
+            IsCellOccupiable = false;
+            IsCellOccupied = true;
+            CellBlockProperty = true;
+        }
+
+        protected override void SetBreakable()
+        {
+            IsCellBreakable = false;
+        }
+
+        protected override void SetCellHP()
+        {
+            CellHasHP = false;
+            CellCurrentHP = 0;
+            CellMaxHP = 0;
+        }
+
+        protected override void SetCellInfo()
+        {
+            CellName = "Unbreakable Wall Cell";
+            CellID = CellName[12];
+            CellDescriptor = "A solid, unbreakable Wall Cell.";
+            CellFormatter = String.Concat("{ ", Char.ToString(Char.ToLower(CellName[12])), " }", "");
+        }
     }
 }
