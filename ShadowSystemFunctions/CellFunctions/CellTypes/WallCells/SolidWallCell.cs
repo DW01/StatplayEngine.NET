@@ -16,10 +16,10 @@ using System.Threading.Tasks;
 
 namespace ShadowSystem.CellFunctions.CellTypes.WallCells
 {
-    class SolidWallCell : EmptyCell, ICell
+    class SolidWallCell : Cell, ICell
     {
         // Helper function overrides.
-        protected override void SetFlags()
+        protected override void InitFlags()
         {
             IsCellPassable = false;
             IsCellOccupiable = false;
@@ -27,24 +27,41 @@ namespace ShadowSystem.CellFunctions.CellTypes.WallCells
             CellBlockProperty = true;
         }
 
-        protected override void SetBreakable()
+        protected override void InitBreakable()
         {
             IsCellBreakable = false;
         }
 
-        protected override void SetCellHP()
+        protected override void InitCellHP()
         {
             CellHasHP = false;
             CellCurrentHP = 0;
             CellMaxHP = 0;
         }
 
-        protected override void SetCellInfo()
+        protected override void InitCellInfo()
         {
             CellName = "Unbreakable Wall Cell";
             CellID = CellName[12];
             CellDescriptor = "A solid, unbreakable Wall Cell.";
             CellFormatter = String.Concat("{ ", Char.ToString(Char.ToLower(CellName[12])), " }", "");
+        }
+
+        // Interface method declarations so we can run the helpers.
+        new public void InitialiseFlags()
+        {
+            InitFlags();
+        }
+
+        new public void InitialiseBreakability()
+        {
+            InitBreakable();
+            InitCellHP();
+        }
+
+        new public void CreateCell()
+        {
+            InitCellInfo();
         }
     }
 }

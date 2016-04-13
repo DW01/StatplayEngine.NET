@@ -8,10 +8,10 @@ namespace ShadowSystem.CellFunctions.CellTypes.WallCells
 {
     // Special "Starting Cells". Position can be changed (not yet implemented, obviously).
     // Will probably become its own class file later.
-    public class StartingCell : EmptyCell, ICell
+    public class StartingCell : Cell, ICell
     {
         // Implementation of interface helper methods.
-        protected override void SetFlags()
+        protected override void InitFlags()
         {
             IsCellPassable = true;
             IsCellOccupiable = true;
@@ -19,19 +19,19 @@ namespace ShadowSystem.CellFunctions.CellTypes.WallCells
             CellBlockProperty = false;
         }
 
-        protected override void SetBreakable()
+        protected override void InitBreakable()
         {
             IsCellBreakable = false;
         }
 
-        protected override void SetCellHP()
+        protected override void InitCellHP()
         {
             CellHasHP = false;
             CellCurrentHP = 0;
             CellMaxHP = 0;
         }
 
-        protected override void SetCellInfo()
+        protected override void InitCellInfo()
         {
             CellName = "Starting Cell";
             CellID = CellName[0];
@@ -42,28 +42,18 @@ namespace ShadowSystem.CellFunctions.CellTypes.WallCells
         // Interface methods implemetation.
         new public void InitialiseFlags()
         {
-            SetFlags();
+            InitFlags();
         }
 
         new public void InitialiseBreakability()
         {
-            SetBreakable();
-            SetCellHP();
+            InitBreakable();
+            InitCellHP();
         }
 
         new public void CreateCell()
         {
-            SetCellInfo();
+            InitCellInfo();
         }
-
-        // Constructor pass.
-        public StartingCell()
-        {
-            InitialiseFlags();
-            InitialiseBreakability();
-            CreateCell();
-        }
-
-        StartingCell startingCell = new StartingCell();
     }
 }

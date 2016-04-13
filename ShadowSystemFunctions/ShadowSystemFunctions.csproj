@@ -40,11 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellFunctions\Cell.cs" />
     <Compile Include="CellFunctions\CellTypes\EmptyCell.cs" />
     <Compile Include="CellFunctions\CellTypes\WallCells\SolidWallCell.cs" />
     <Compile Include="CellFunctions\CellTypes\WallCells\StartingCell.cs" />
     <Compile Include="CellFunctions\ICell.cs" />
-    <Compile Include="CharSheetFunctions\CharSheetBase.cs" />
+    <Compile Include="CharSheetFunctions\CharSheet.cs" />
     <Compile Include="CharSheetFunctions\ICharSheet.cs" />
     <Compile Include="GridFunctions\IGrid.cs" />
     <Compile Include="IShadowSystem.cs" />
@@ -54,9 +55,9 @@
     <Compile Include="MathFunctions\StatisticsMath\IDamage.cs" />
     <Compile Include="MathFunctions\StatisticsMath\IHealing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShadowSystemBase.cs" />
+    <Compile Include="ShadowSystem.cs" />
     <Compile Include="StatFunctions\IStat.cs" />
-    <Compile Include="StatFunctions\StatBase.cs" />
+    <Compile Include="StatFunctions\Stat.cs" />
     <Compile Include="UnitFunctions\IUnit.cs" />
   </ItemGroup>
   <ItemGroup />

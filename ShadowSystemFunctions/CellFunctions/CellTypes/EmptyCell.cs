@@ -17,28 +17,10 @@ using System.Threading.Tasks;
 namespace ShadowSystem.CellFunctions.CellTypes
 {
     // Empty cell class, as referenced in CellBase.cs
-    public class EmptyCell : ICell
+    public class EmptyCell : Cell, ICell
     {
-        // Descriptor strings.
-        public string CellName;
-        public char CellID;
-        public string CellDescriptor;
-        public string CellFormatter;
-
-        // Passability flags.
-        public bool IsCellPassable;
-        public bool IsCellOccupiable;
-        public bool IsCellOccupied;
-
-        // Breakablility and block property.
-        public bool IsCellBreakable;
-        public bool CellHasHP;
-        public double CellCurrentHP;
-        public double CellMaxHP;
-        public bool CellBlockProperty;
-
         // Helper methods.
-        protected virtual void SetFlags()
+        protected override void InitFlags()
         {
             IsCellPassable = true;
             IsCellOccupiable = true;
@@ -46,19 +28,19 @@ namespace ShadowSystem.CellFunctions.CellTypes
             CellBlockProperty = false;
         }
 
-        protected virtual void SetBreakable()
+        protected override void InitBreakable()
         {
             IsCellBreakable = false;
         }
 
-        protected virtual void SetCellHP()
+        protected override void InitCellHP()
         {
             CellHasHP = false;
             CellCurrentHP = 0;
             CellMaxHP = 0;
         }
 
-        protected virtual void SetCellInfo()
+        protected override void InitCellInfo()
         {
             CellName = "Empty Cell";
             CellID = CellName[0];
@@ -66,31 +48,22 @@ namespace ShadowSystem.CellFunctions.CellTypes
             CellFormatter = "{ }";
         }
         // Implementation of interface contract methods.
-        public void InitialiseFlags()
+        new public void InitialiseFlags()
         {
-            SetFlags();
+            InitFlags();
         }
 
-        public void InitialiseBreakability()
+        new public void InitialiseBreakability()
         {
-            SetBreakable();
-            SetCellHP();
+            InitBreakable();
+            InitCellHP();
         }
 
-        public void CreateCell()
+        new public void CreateCell()
         {
-            SetCellInfo();
+            InitCellInfo();
         }
-        // Constructor.
-        public EmptyCell()
-        {
-            InitialiseFlags();
-            InitialiseBreakability();
-            CreateCell();
-        }
-
-        // Run constructor, return.
-        EmptyCell emptyCell = new EmptyCell();
+ 
 
     }
      

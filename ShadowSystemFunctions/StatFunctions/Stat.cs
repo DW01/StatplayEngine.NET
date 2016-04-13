@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShadowSystem.CharSheetFunctions
+namespace ShadowSystem.StatFunctions
 {
-    public class CharSheetBase
+    public class Stat
     {
     }
 }

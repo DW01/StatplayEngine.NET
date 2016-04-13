@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShadowSystem.StatFunctions
+namespace ShadowSystemFunctions
 {
-    public class StatBase
+    public class ShadowSystem
     {
     }
 }
