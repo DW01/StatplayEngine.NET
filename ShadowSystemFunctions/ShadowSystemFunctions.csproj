@@ -43,7 +43,7 @@
     <Compile Include="CellFunctions\Cell.cs" />
     <Compile Include="CellFunctions\CellTypes\EmptyCell.cs" />
     <Compile Include="CellFunctions\CellTypes\WallCells\SolidWallCell.cs" />
-    <Compile Include="CellFunctions\CellTypes\WallCells\StartingCell.cs" />
+    <Compile Include="CellFunctions\CellTypes\StartingCell.cs" />
     <Compile Include="CellFunctions\ICell.cs" />
     <Compile Include="CharSheetFunctions\CharSheet.cs" />
     <Compile Include="CharSheetFunctions\ICharSheet.cs" />
