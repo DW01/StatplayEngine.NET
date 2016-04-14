@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{0E43D3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowSystemFunctions", "ShadowSystemFunctions\ShadowSystemFunctions.csproj", "{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowSystemTester", "ShadowSystemTester\ShadowSystemTester.csproj", "{7236149A-E849-4998-ADE5-EC4DBC7DC595}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7236149A-E849-4998-ADE5-EC4DBC7DC595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7236149A-E849-4998-ADE5-EC4DBC7DC595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7236149A-E849-4998-ADE5-EC4DBC7DC595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7236149A-E849-4998-ADE5-EC4DBC7DC595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

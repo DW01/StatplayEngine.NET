@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{7236149A-E849-4998-ADE5-EC4DBC7DC595}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShadowSystem</RootNamespace>
-    <AssemblyName>ShadowSystemPlugin</AssemblyName>
+    <RootNamespace>ShadowSystemTester</RootNamespace>
+    <AssemblyName>ShadowSystemTester</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,28 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CellFunctions\Cell.cs" />
-    <Compile Include="CellFunctions\CellTypes\EmptyCell.cs" />
-    <Compile Include="CellFunctions\CellTypes\WallCells\SolidWallCell.cs" />
-    <Compile Include="CellFunctions\CellTypes\StartingCell.cs" />
-    <Compile Include="CellFunctions\ICell.cs" />
-    <Compile Include="CharSheetFunctions\CharSheet.cs" />
-    <Compile Include="CharSheetFunctions\ICharSheet.cs" />
-    <Compile Include="GridFunctions\Grid.cs" />
-    <Compile Include="GridFunctions\IGrid.cs" />
-    <Compile Include="IShadowSystem.cs" />
-    <Compile Include="MathFunctions\IMath.cs" />
-    <Compile Include="MathFunctions\StatisticsMath\DamageTypes\BasicDamage.cs" />
-    <Compile Include="MathFunctions\StatisticsMath\DamageTypes\PercentMaxHPDamage.cs" />
-    <Compile Include="MathFunctions\StatisticsMath\IDamage.cs" />
-    <Compile Include="MathFunctions\StatisticsMath\IHealing.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShadowSystem.cs" />
-    <Compile Include="StatFunctions\IStat.cs" />
-    <Compile Include="StatFunctions\Stat.cs" />
-    <Compile Include="UnitFunctions\IUnit.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShadowSystemFunctions\ShadowSystemFunctions.csproj">
+      <Project>{742839c2-4b1f-4b4c-b3f8-1dd52dec3aa2}</Project>
+      <Name>ShadowSystemFunctions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
