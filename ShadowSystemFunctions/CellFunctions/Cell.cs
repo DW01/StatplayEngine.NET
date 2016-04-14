@@ -180,6 +180,93 @@ namespace ShadowSystem.CellFunctions
             this.CellOccupier = CellOccupier;
         }
 
+        // Get the Cell's Block Property.
+        public bool GetCellBlockProperty()
+        {
+            return CellBlockProperty;
+        }
+
+        // Set the cell's block property.
+        //
+        // @param CellBlockProperty - does the Cell block magic or ranged projectiles?
+        public void SetCellBlockProperty(bool CellBlockProperty)
+        {
+            this.CellBlockProperty = CellBlockProperty;
+        }
+
+        // Get cell breakability status (usually false).
+        public bool GetCellBreakability()
+        {
+            return IsCellBreakable;
+        }
+
+        // Set whether cell is breakable or not.
+        //
+        // @param IsCellBreakable - Is the cell we're operating on going to be breakable?
+        public void SetCellBreakability(bool IsCellBreakable)
+        {
+            this.IsCellBreakable = IsCellBreakable;
+        }
+
+        // Get whether Cell has HP.
+        // Used for Unit Cells, other Cells use CON.
+        public bool GetIfCellHasHP()
+        {
+            return CellHasHP;
+        }
+
+        // Set whether Cell has HP.
+        // Used for Unit Cells, all other Cells use CON.
+        //
+        // @param CellHasHP - Does the Cell we're operating on have HP?
+        public void SetIfCellHasHP(bool CellHasHP)
+        {
+            this.CellHasHP = CellHasHP;
+        }
+
+        // Unique method to get BOTH CellCurrentHP and CellMaxHP at the same time.
+        public Tuple<double, double> GetCellHPValues()
+        {
+            return Tuple.Create(CellCurrentHP, CellMaxHP);
+        }
+
+        // Unique method to set BOTH CellCurrentHP and CellMaxHP at the same time.
+        // Usually only need to call this when initially setting up the grid's UnitCells.
+        //
+        // @params CellCurrentHP, CellMaxHP - Cell HP values.
+        public void SetCellHPValues(double CellHPValues)
+        {
+            this.CellCurrentHP = CellHPValues;
+            this.CellMaxHP = CellHPValues;
+        }
+
+        // Get cell's current HP.
+        public double GetCellCurrentHP()
+        {
+            return CellCurrentHP;
+        }
+
+        // Set cell's current HP.
+        //
+        // @param CellCurrentHP - The cell's current HP.
+        public void SetCellCurrentHP(double CellCurrentHP)
+        {
+            this.CellCurrentHP = CellCurrentHP;
+        }
+
+        // Get Cell's Max HP, useful for Percent Max HP Damage or Healing.
+        public double GetCellMaxHP()
+        {
+            return CellMaxHP;
+        }
+
+        // Set cell max HP.
+        //
+        // @param CellMaxHP - the Cell's maximum HP value.
+        public void SetCellMaxHP(double CellMaxHP)
+        {
+            this.CellMaxHP = CellMaxHP;
+        }
 
         // Constructor for all other Cells to use.
         public Cell()

@@ -63,6 +63,14 @@ namespace ShadowSystem.CellFunctions.CellTypes
         {
             InitCellInfo();
         }
+
+        // Constructor.
+        public EmptyCell()
+        {
+            InitialiseFlags();
+            InitialiseBreakability();
+            CreateCell();
+        }
  
 
     }
