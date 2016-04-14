@@ -78,6 +78,109 @@ namespace ShadowSystem.CellFunctions
             InitCellInfo();
         }
 
+        // Getter / setter methods, used by the grid.
+
+        // Return cell name.
+        public string GetCellName()
+        {
+            return CellName;
+        }
+
+        // Set cell name.
+        //
+        // @param CellName
+        public void SetCellName(string CellName)
+        {
+            this.CellName = CellName;
+        }
+
+        // Get Cell ID.
+        public char GetCellID()
+        {
+            return CellID;
+        }
+
+        // Set cell ID.
+        //
+        // @param CellName
+        public void SetCellID(char CellID)
+        {
+            this.CellID = CellID;
+        }
+
+        // Get cell description from string Cell.CellDescriptor.
+        public string GetCellDescriptor()
+        {
+            return CellDescriptor;
+        }
+
+        // Set cell description.
+        //
+        // @param CellDescriptor - Description of CellType.
+        public void SetCellDescriptor(string CellDescriptor)
+        {
+            this.CellDescriptor = CellDescriptor;
+        }
+
+        // Get CellFormatter
+        public string GetCellFormatter()
+        {
+            return CellFormatter;
+        }
+
+        // Set CellFormatter.
+        //
+        // @param CellFormatter - How the CellType is formatted on the grid.
+        public void SetCellFormatter(string CellFormatter)
+        {
+            this.CellFormatter = CellFormatter;
+        }
+
+        // Return whether Cell of type x is passable by Units or not.
+        public bool GetCellPassability()
+        {
+            return IsCellPassable;
+        }
+
+        // Set passability of any given CellType.
+        //
+        // @param IsCellPassable
+        public void SetCellPassability(bool IsCellPassable)
+        {
+            this.IsCellPassable = IsCellPassable;
+        }
+
+        // Return whether Cell is occupiable by any Unit.
+        // TODO: also run check to see if Cell is occupied.
+        public bool GetCellOccupiability()
+        {
+            return IsCellOccupiable;
+        }
+
+        // Set occupiability of CellType.
+        // TODO: also run check to see if Cell is occupied.
+        //
+        // @param IsCellOccupiable
+        public void SetCellOccupiability(bool IsCellOccupiable)
+        {
+            this.IsCellOccupiable = IsCellOccupiable;
+        }
+
+        // Get cell occupier ID.
+        public char GetCellOccupier()
+        {
+            return CellOccupier;
+        }
+
+        // Set Cell's Occupier.
+        //
+        // @param CellOccupier
+        public void SetCellOccupier(char CellOccupier)
+        {
+            this.CellOccupier = CellOccupier;
+        }
+
+
         // Constructor for all other Cells to use.
         public Cell()
         {
