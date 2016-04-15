@@ -13,13 +13,16 @@ namespace ShadowSystem.GridFunctions
         // 2D array, to be iterated over in RenderGrid();
         private static int GridXAxis, GridYAxis;
         private int[,] GridArray = new int[GridXAxis, GridYAxis];
+        
+        
 
         // Grid renderer.
         public void RenderGrid()
         {
-            for (int y = 0; y < GridYAxis; y++)
+            GridArray.Initialize();
+            for (int y = 0; y < GridArray.GetLength(0); y++)
             {
-                for (int x = 0; x < GridXAxis; x++)
+                for (int x = 0; x < GridArray.GetLength(1); x++)
                 {
                     EmptyCell emptyCell = new EmptyCell();
                     Console.Write(emptyCell.GetCellFormatter() + " ");
@@ -31,9 +34,10 @@ namespace ShadowSystem.GridFunctions
         // Add x-axis labels along bottom.
         public void AddXLabels()
         {
+            GridArray.Initialize();
             Console.Write("-");
 
-            for (int u = 1; u <= GridXAxis; u++)
+            for (int u = 1; u <= GridArray.GetLength(1); u++)
             {
                 if (u < 9)
                 {
