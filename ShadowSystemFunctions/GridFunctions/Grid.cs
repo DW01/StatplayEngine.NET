@@ -36,5 +36,14 @@ namespace ShadowSystem.GridFunctions
 
             RenderGrid();
         }
+
+        // Constructor to create an arbitrary grid.
+        public Grid(int GridXAxis, int GridYAxis)
+        {
+            Grid.GridXAxis = GridXAxis;
+            Grid.GridYAxis = GridYAxis;
+
+            RenderGrid();
+        }
     }
 }
