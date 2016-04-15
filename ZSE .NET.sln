@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShadowSystemFunctions", "ShadowSystemFunctions", "{78D4AE02-D283-43B3-AB5F-12E217281AC1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{0E43D351-FE39-4204-ADB4-4C5562493AF0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowSystemFunctions", "ShadowSystemFunctions\ShadowSystemFunctions.csproj", "{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowSystemTester", "ShadowSystemTester\ShadowSystemTester.csproj", "{7236149A-E849-4998-ADE5-EC4DBC7DC595}"
@@ -34,9 +30,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{78D4AE02-D283-43B3-AB5F-12E217281AC1} = {0E43D351-FE39-4204-ADB4-4C5562493AF0}
-		{742839C2-4B1F-4B4C-B3F8-1DD52DEC3AA2} = {78D4AE02-D283-43B3-AB5F-12E217281AC1}
 	EndGlobalSection
 EndGlobal
