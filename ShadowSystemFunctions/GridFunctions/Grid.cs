@@ -33,7 +33,7 @@ namespace ShadowSystem.GridFunctions
         {
             Console.Write("-");
 
-            for (int u = 1; u < GridXAxis; u++)
+            for (int u = 1; u <= GridXAxis; u++)
             {
                 if (u < 9)
                 {
