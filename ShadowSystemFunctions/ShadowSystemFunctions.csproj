@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ShadowSystem</RootNamespace>
-    <AssemblyName>ShadowSystemPlugin</AssemblyName>
+    <AssemblyName>StatSystems.ShadowSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
