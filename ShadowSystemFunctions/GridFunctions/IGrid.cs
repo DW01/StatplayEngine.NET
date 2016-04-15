@@ -10,5 +10,6 @@ namespace ShadowSystem.GridFunctions
     public interface IGrid
     {
         void RenderGrid();
+        void AddXLabels();
     }
 }

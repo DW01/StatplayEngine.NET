@@ -28,6 +28,36 @@ namespace ShadowSystem.GridFunctions
             }
         }
 
+        // Add x-axis labels along bottom.
+        public void AddXLabels()
+        {
+            Console.Write("-");
+
+            for (int u = 1; u < GridXAxis; u++)
+            {
+                if (u < 9)
+                {
+                    Console.Write(u + "---");
+                }
+                else if (u == 9)
+                {
+                    Console.Write(u + "--");
+                }
+                else if (u >= 10)
+                {
+                    if ((u % 10) == 0)
+                    {
+                        Console.Write(u / 10 + " 0" + "-");
+                    }
+                    else
+                    {
+                        Console.Write(u / 10 + " " + (u % 10) + "-");
+                    }
+                }
+            }
+            Console.Write(Environment.NewLine);
+        }
+
         // Default constructor for a nine by nine grid, because fuck Eebit.
         public Grid()
         {
@@ -35,6 +65,7 @@ namespace ShadowSystem.GridFunctions
             GridYAxis = 9;
 
             RenderGrid();
+            AddXLabels();
         }
 
         // Constructor to create an arbitrary grid.
@@ -44,6 +75,7 @@ namespace ShadowSystem.GridFunctions
             Grid.GridYAxis = GridYAxis;
 
             RenderGrid();
+            AddXLabels();
         }
     }
 }

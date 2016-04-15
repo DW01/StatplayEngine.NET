@@ -34,9 +34,16 @@ namespace ArbitraryGridTester
             Console.Write(grid);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void resetButton_Click(object sender, EventArgs e)
         {
+            this.CellsOnX.Value = 9;
+            this.CellsOnY.Value = 9;
+        }
 
+        private void printToFile_Click(object sender, EventArgs e)
+        {
+            outputBox.Clear();
+            Console.Write("Not yet implemented.");
         }
     }
 }

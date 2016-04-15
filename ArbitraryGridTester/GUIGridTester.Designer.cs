@@ -75,7 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 136);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // CellsOnY
             // 
@@ -110,6 +109,7 @@
             this.printToFile.TabIndex = 7;
             this.printToFile.Text = "PRINT CELLS TO TEXT FILE";
             this.printToFile.UseVisualStyleBackColor = true;
+            this.printToFile.Click += new System.EventHandler(this.printToFile_Click);
             // 
             // resetButton
             // 
@@ -120,6 +120,7 @@
             this.resetButton.TabIndex = 6;
             this.resetButton.Text = "RESET";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // button1
             // 
