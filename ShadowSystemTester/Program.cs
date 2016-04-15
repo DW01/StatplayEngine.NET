@@ -13,7 +13,6 @@ namespace ShadowSystemTester
         {
             // Try to print a 9x9 grid.
             Grid grid = new Grid();
-            Console.Write(grid);
         }
     }
 }

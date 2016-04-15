@@ -31,7 +31,6 @@ namespace ArbitraryGridTester
             consoleWriter = new TextBoxWriter(outputBox);
             Console.SetOut(consoleWriter);
             Grid grid = new Grid(XCells, YCells);
-            Console.Write(grid);
         }
 
         private void resetButton_Click(object sender, EventArgs e)

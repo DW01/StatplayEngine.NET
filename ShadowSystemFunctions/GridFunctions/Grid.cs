@@ -76,6 +76,8 @@ namespace ShadowSystem.GridFunctions
 
             RenderGrid();
             AddXLabels();
+            // AddYLabels(); not implemented yet
+
         }
     }
 }
