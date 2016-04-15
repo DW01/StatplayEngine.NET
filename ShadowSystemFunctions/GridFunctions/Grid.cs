@@ -17,9 +17,9 @@ namespace ShadowSystem.GridFunctions
         // Grid renderer.
         public void RenderGrid()
         {
-            for (int x = 0; x < GridXAxis; x++)
+            for (int y = 0; y < GridYAxis; y++)
             {
-                for (int y = 0; y < GridYAxis; y++)
+                for (int x = 0; x < GridXAxis; x++)
                 {
                     EmptyCell emptyCell = new EmptyCell();
                     Console.Write(emptyCell.GetCellFormatter() + " ");
