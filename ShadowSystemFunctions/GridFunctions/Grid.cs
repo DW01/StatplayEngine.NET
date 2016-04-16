@@ -19,27 +19,17 @@ namespace ShadowSystem.GridFunctions
         // Grid renderer.
         public void RenderGrid()
         {
-            for (int y = 0; y < GridArray.GetLength(0); y++)
+            for (int y = 1; y <= GridArray.GetLength(0); y++)
             {
-                for (int x = 0; x < GridArray.GetLength(1); x++)
+                for (int x = 1; x <= GridArray.GetLength(1); x++)
                 {
                     EmptyCell emptyCell = new EmptyCell();
                     Console.Write(emptyCell.GetCellFormatter() + " ");                   
                 }
 
-                for (char v = 'A'; v > GridArray.GetUpperBound(1); v++)
-                {
-                    if (v < 'Z')
-                    {
-                        Console.Write(Char.ToString(v));
-                    }
-                    else if (v == 'Z')
-                    {
-                        Console.Write(Char.ToString(v));
-                    }
-                }
-                Console.Write(Environment.NewLine);
-            }         
+                // Write y-axis labels.
+                Console.Write(Convert.ToChar(y + 64) + Environment.NewLine);              
+            }            
         }
 
         // Add x-axis labels along bottom.
