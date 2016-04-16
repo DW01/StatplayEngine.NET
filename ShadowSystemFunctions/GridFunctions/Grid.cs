@@ -24,10 +24,22 @@ namespace ShadowSystem.GridFunctions
                 for (int x = 0; x < GridArray.GetLength(1); x++)
                 {
                     EmptyCell emptyCell = new EmptyCell();
-                    Console.Write(emptyCell.GetCellFormatter() + " ");
+                    Console.Write(emptyCell.GetCellFormatter() + " ");                   
+                }
+
+                for (char v = 'A'; v > GridArray.GetUpperBound(1); v++)
+                {
+                    if (v < 'Z')
+                    {
+                        Console.Write(Char.ToString(v));
+                    }
+                    else if (v == 'Z')
+                    {
+                        Console.Write(Char.ToString(v));
+                    }
                 }
                 Console.Write(Environment.NewLine);
-            }
+            }         
         }
 
         // Add x-axis labels along bottom.
@@ -55,8 +67,8 @@ namespace ShadowSystem.GridFunctions
                     {
                         Console.Write(u / 10 + " " + (u % 10) + "-");
                     }
-                }
-            }
+                }            
+            }           
             Console.Write(Environment.NewLine);
         }
 
@@ -79,7 +91,6 @@ namespace ShadowSystem.GridFunctions
 
             RenderGrid();
             AddXLabels();
-            // AddYLabels(); not implemented yet
             GridArray.Initialize();
 
         }
